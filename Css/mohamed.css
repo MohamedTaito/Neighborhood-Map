@@ -1,0 +1,59 @@
+body {
+  font-family: Arial, sans-serif;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+    border-radius: 0px;
+    margin-bottom: 0;
+}
+
+.nav-title {
+    font-size: 25px;
+    text-transform: uppercase;
+    color: white;
+}
+
+#map {
+    margin: 0;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    z-index: -1;
+}
+
+.sidenav {
+    margin: 0;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+}
+
+.list-group-item {
+    margin: 0;
+    color: black;
+    border-right: solid;
+    border-bottom: solid;
+}
+
+#pano {
+    width: 200px;
+    height: 200px;
+}
+
+.list-group-item:focus {
+    color: #fff;
+    background-color: rgb(34, 34, 34);
+    border-color: rgb(34, 34, 34);
+}
+
+.list-group-item:hover {
+    color: #f5f5f5;
+    background-color: #555;
+}

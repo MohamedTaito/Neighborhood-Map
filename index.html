@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+
+    <title>Neighborhood-Map</title>
+
+    <!-- Bootstrap -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- CSSs -->
+    <link href="css/Mohamed.css" rel="stylesheet">
+
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <div class="navbar-brand">
+            <span class="nav-title">Map</span>
+          </div>
+        </div>
+        <form class="navbar-form navbar-right" role="search">
+          <div class="input-group">
+              <input type="text" class="form-control" placeholder="Search" name="q" data-bind="textInput: searchItem, valueUpdate: 'afterkeydown'">
+              <div class="input-group-btn">
+                  <button class="btn btn-default"><i class="glyphicon glyphicon-search"></i></button>
+              </div>
+          </div>
+        </form>
+      </div>
+    </nav>
+
+    <main class="container-fluid">
+      <div class="row">
+        <div id="map"></div>
+        <div class="col-md-3 col-md-offset-0" id="navbarSupportedContent">
+          <div class="sidenav">
+            <div class="list-group" data-bind="foreach: locationList">
+                <a href="#" class="list-group-item list-group-item-action" data-bind="text: title, click: show"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+  <!-- Knockout.js -->
+  <script src="JS/lib/knockout.min.js"></script>
+  <script src="JS/data.js"></script>
+  <script src="JS/styles.js"></script>
+  <script src="JS/mohamed.js"></script>
+</script>
+<script async defer
+    src=
+    "https://maps.googleapis.com/maps/api/js?key=AIzaSyBbLtcDTEo5libkcoQlIE7l6gjYXfgjtHA&libraries=geometry,drawing,places&v=3&callback=initMap">
+</script>
+
+</body>
+</html>
