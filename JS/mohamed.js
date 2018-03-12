@@ -24,7 +24,6 @@ function initMap() {
 
 }
 
-// map error handler
 function openNav() {
     document.getElementById("mySidenav").style.width = "250px";
 }
@@ -175,7 +174,7 @@ function populateInfoWindow(marker, street, city, phone, infowindow) {
                 var nearStreetViewLocation = data.location.latLng;
                 var heading = google.maps.geometry.spherical.computeHeading(
                     nearStreetViewLocation, marker.position);
-                infowindow.setContent(windowContent + '<div id="pano"></div>');
+                infowindow.setContent(windowContent + '<div id="pano" class="pano"></div>');
                 var panoramaOptions = {
                     position: nearStreetViewLocation,
                     pov: {
