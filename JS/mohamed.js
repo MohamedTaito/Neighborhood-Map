@@ -19,12 +19,9 @@ function initMap() {
     infoWindow = new google.maps.InfoWindow();
 
     bounds = new google.maps.LatLngBounds();
-    googleError = function googleError() {
-      alert('Oops. Google Maps did not load. Please refresh the page and try again!');
-};
-
 
     ko.applyBindings(new ViewModel());
+
 }
 
 // map error handler
@@ -144,6 +141,11 @@ var ViewModel = function() {
         return self.mapList();
     }, self);
 };
+
+// Handling possible errors from google API
+function googleAPIError() {
+    alert("Opps There is An Error in Map!!");
+}
 
 // This function populates the infowindow when the marker is clicked. We'll only allow
 // one infowindow which will open at the marker that is clicked, and populate based
