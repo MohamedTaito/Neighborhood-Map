@@ -2,7 +2,7 @@
 
 var locations = [
   {
-      title: 'Egyption Museum',
+      title: 'Egyptian Museum',
       location: {
           lat: 30.047847,
           lng: 31.233649

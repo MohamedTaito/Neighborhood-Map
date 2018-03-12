@@ -7,13 +7,13 @@ var $wiki1 = $('#wikipedia-header');
 
 // google maps initialize
 function initMap() {
-    var October = {
-        lat: 36.9741171,
-        lng: 30.918783
+    var Cairo = {
+        lat: 30.044420,
+        lng: 31.235712
     };
     map = new google.maps.Map(document.getElementById('map'), {
         zoom: 13,
-        center: October,
+        center: Cairo,
         styles: styles,
         mapTypeControl: false
     });
