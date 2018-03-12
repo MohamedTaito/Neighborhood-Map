@@ -2,8 +2,6 @@
 var map;
 var infoWindow;
 var bounds;
-var $wiki = $('#wikipedia-links');
-var $wiki1 = $('#wikipedia-header');
 
 // google maps initialize
 function initMap() {
@@ -21,17 +19,24 @@ function initMap() {
     infoWindow = new google.maps.InfoWindow();
 
     bounds = new google.maps.LatLngBounds();
+    googleError = function googleError() {
+      alert('Oops. Google Maps did not load. Please refresh the page and try again!');
+};
+
 
     ko.applyBindings(new ViewModel());
 }
 
 // map error handler
-function googleMapsError() {
-    alert('Error occurred with Google Maps!');
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
 }
 
 // data in Model
-/* Location Model */
 var ModelMarker = function(data) {
     var self = this;
 

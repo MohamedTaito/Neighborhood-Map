@@ -14,10 +14,6 @@
     <!-- Bootstrap -->
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!-- CSSs -->
     <link href="css/Mohamed.css" rel="stylesheet">
 
@@ -40,26 +36,31 @@
 
     <main class="container-fluid">
       <div class="row">
-        <div id="map"></div>
-        <div class="col-md-3 col-md-offset-0" id="navbarSupportedContent">
-          <div class="sidenav">
-            <div class="list-group" data-bind="foreach: locationList">
-                <a href="#" class="list-group-item list-group-item-action" data-bind="text: title, click: show"></a>
-            </div>
+        <div id="map" class="map"></div>
+        <div id="mySidenav" class="sidenav">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <div class="list-group" data-bind="foreach: locationList">
+              <a href="#" class="list-group-item list-group-item-action" data-bind="text: title, click: show"></a>
           </div>
         </div>
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
       </div>
     </main>
 
-  <!-- Knockout.js -->
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- Knockout.js -->
   <script src="JS/lib/knockout.min.js"></script>
   <script src="JS/data.js"></script>
   <script src="JS/styles.js"></script>
   <script src="JS/mohamed.js"></script>
-</script>
 <script async defer
     src=
-    "https://maps.googleapis.com/maps/api/js?key=AIzaSyBbLtcDTEo5libkcoQlIE7l6gjYXfgjtHA&libraries=geometry,drawing,places&v=3&callback=initMap">
+    "https://maps.googleapis.com/maps/api/js?key=AIzaSyBbLtcDTEo5libkcoQlIE7l6gjYXfgjtHA&libraries=geometry,drawing,places&v=3&callback=initMap"
+    onerror="ViewModel.errorMessage('Google Maps Error')">
 </script>
 
 </body>
